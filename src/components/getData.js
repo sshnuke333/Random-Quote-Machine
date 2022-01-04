@@ -11,10 +11,9 @@ export const getQuoteData = async function () {
         const authorDisplay = document.getElementById('author');
         const tweetIntent = document.getElementById('tweet-quote');
         textDisplay.innerText = text;
-        authorDisplay.innerText = author;
+        authorDisplay.innerText = `- ${author}`;
         tweetIntent.href = `https://twitter.com/intent/tweet?text=${text} - ${author}`;
     } catch (error) {
-        console.error(error);
-        return error;
+        alert(error);
     }
 };
